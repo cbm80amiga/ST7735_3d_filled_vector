@@ -1,0 +1,57 @@
+build.arch = STM32F1
+build.board = GENERIC_STM32F103C
+build.common_flags = -mthumb  -march=armv7-m -D__STM32F1__ -DARDUINO_ARCH_STM32
+build.core = maple
+build.core.path = C:\Users\Pawel\Documents\Arduino\hardware\Arduino_STM32\STM32F1\cores\maple
+build.cpu_flags = -DMCU_STM32F103CB
+build.error_led_pin = 13
+build.error_led_port = GPIOC
+build.extra_flags = {build.upload_flags} {build.cpu_flags} {build.hs_flag} {build.common_flags}
+build.f_cpu = 72000000L
+build.flags.ldspecs = 
+build.flags.optimize = -Os
+build.hs_flag = 
+build.ldscript = ld/jtag.ld
+build.mcu = cortex-m3
+build.path = C:\Users\Pawel\AppData\Local\Temp\build8920893723999524237.tmp
+build.project_name = ST7735_3d_filled_vector.cpp
+build.source.path = C:\Users\Pawel\Documents\Arduino\ST7735_tests\ST7735_3d_filled_vector
+build.system.path = C:\Users\Pawel\Documents\Arduino\hardware\Arduino_STM32\STM32F1\system
+build.upload_flags = -DCONFIG_MAPLE_MINI_NO_DISABLE_DEBUG=1 -DSERIAL_USB -DGENERIC_BOOTLOADER
+build.variant = generic_stm32f103c
+build.variant.path = C:\Users\Pawel\Documents\Arduino\hardware\Arduino_STM32\STM32F1\variants\generic_stm32f103c
+build.variant_system_lib = libmaple.a
+build.vect = VECT_TAB_ADDR=0x8000000
+build.verbose = false
+build.warn_data_percentage = 75
+compiler.S.cmd = arm-none-eabi-gcc
+compiler.S.extra_flags = 
+compiler.S.flags = -c -g -x assembler-with-cpp -MMD
+compiler.ar.cmd = arm-none-eabi-ar
+compiler.ar.extra_flags = 
+compiler.ar.flags = rcs
+compiler.c.cmd = arm-none-eabi-gcc
+compiler.c.elf.cmd = arm-none-eabi-g++
+compiler.c.elf.extra_flags = "-L{build.variant.path}/ld"
+compiler.c.elf.flags = {build.flags.optimize} -Wl,--gc-sections {build.flags.ldspecs}
+compiler.c.extra_flags = 
+compiler.c.flags = -c -g {build.flags.optimize} {compiler.warning_flags} -std=gnu11 -MMD -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -DBOARD_{build.variant} -D{build.vect} -DERROR_LED_PORT={build.error_led_port} -DERROR_LED_PIN={build.error_led_pin}
+compiler.cpp.cmd = arm-none-eabi-g++
+compiler.cpp.extra_flags = 
+compiler.cpp.flags = -c -g {build.flags.optimize} {compiler.warning_flags} -std=gnu++11 -MMD -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -DBOARD_{build.variant} -D{build.vect} -DERROR_LED_PORT={build.error_led_port} -DERROR_LED_PIN={build.error_led_pin}
+compiler.define = -DARDUINO=
+compiler.elf2hex.cmd = arm-none-eabi-objcopy
+compiler.elf2hex.extra_flags = 
+compiler.elf2hex.flags = -O binary
+compiler.ldflags = {build.flags.ldspecs}
+compiler.libs.c.flags = "-I{build.system.path}/libmaple" "-I{build.system.path}/libmaple/include" "-I{build.system.path}/libmaple/stm32f1/include" "-I{build.system.path}/libmaple/usb/stm32f1" "-I{build.system.path}/libmaple/usb/usb_lib"
+compiler.objcopy.cmd = arm-none-eabi-objcopy
+compiler.objcopy.eep.flags = -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.path = {runtime.tools.arm-none-eabi-gcc.path}/bin/
+compiler.size.cmd = arm-none-eabi-size
+compiler.warning_flags = -w -DDEBUG_LEVEL=DEBUG_NONE
+compiler.warning_flags.all = -Wall -Wextra -DDEBUG_LEVEL=DEBUG_ALL
+compiler.warning_flags.default = -DDEBUG_LEVEL=DEBUG_NONE
+compiler.warning_flags.more = -Wall -DDEBUG_LEVEL=DEBUG_FAULT
+compiler.warning_flags.none = -w -DDEBUG_LEVEL=DEBUG_NONE
+compiler.warning_level = none
