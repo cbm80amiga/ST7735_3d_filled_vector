@@ -1,4 +1,4 @@
-# ST7735 3D Filled Vector
+# ST7735 3D Filled Vector Graphics Example
 Smooth 3D Filled Vector Graphics implementation for STM32 and ST7735 1.8" 128x160 using fast SPI 36Mbps interface
 
 Achieved up to 80 fps
@@ -7,21 +7,9 @@ YouTube video:
 
 https://youtu.be/5y28ipwQs-E
 
+More ST7735 and STM32 videos:
 
-
-## Connections (header at the top):
-
-|LCD pin|LCD pin name|STM32|
-|--|--|--|
- |#01| LED| 3.3V|
- |#02| SCK |PA5/SCK|
- |#03| SCA |PA7/MOSI|
- |#04| A0/DC|PA1 or any digital
- |#05| RESET|PA0 or any digital|
- |#06| CS|PA2 or any digital|
- |#07| GND | GND|
- |#08| VCC | 3.3V|
-
+https://www.youtube.com/watch?v=o3AqITHf0mo&list=PLxb1losWErZ6y6GombzvtwRZ2l7brPv1s
 
 
 ## Implemented features
@@ -36,6 +24,19 @@ https://youtu.be/5y28ipwQs-E
 - backface culling
 - visible faces sorting by Z axis
 - Tested with stm32duino and Arduino IDE 1.6.5
+
+## Connections (header at the top):
+
+|LCD pin|LCD pin name|STM32|
+|--|--|--|
+ |#01| LED| 3.3V|
+ |#02| SCK |PA5/SCK|
+ |#03| SCA |PA7/MOSI|
+ |#04| A0/DC|PA1 or any digital
+ |#05| RESET|PA0 or any digital|
+ |#06| CS|PA2 or any digital|
+ |#07| GND | GND|
+ |#08| VCC | 3.3V|
 
 
 If you find it useful and you want to buy me a coffee or a beer:
